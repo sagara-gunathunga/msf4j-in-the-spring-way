@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>msf4j-in-spring-way</artifactId>
+        <groupId>org.wso2.msf4j.samples.spring</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wso2.msf4j.samples.spring</groupId>
+    <artifactId>jpa-samples</artifactId>
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.msf4j</groupId>
+            <artifactId>msf4j-spring</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>hibernate-book-catalog</module>
+        <module>hibernatetemplate-book-catalog</module>
+        <module>jpa-book-catalog</module>
+        <module>hibernate-book-catalog-secure</module>
+        <module>hibernatetemplate-book-catalog-secure</module>
+        <module>jpa-book-catalog-secure</module>
+    </modules>
+</project>

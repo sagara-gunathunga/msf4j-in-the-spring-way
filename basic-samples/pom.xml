@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>msf4j-in-spring-way</artifactId>
+        <groupId>org.wso2.msf4j.samples.spring</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wso2.msf4j.samples.spring</groupId>
+    <artifactId>basic-samples</artifactId>
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.msf4j</groupId>
+            <artifactId>msf4j-spring</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>sample1</module>
+        <module>sample2</module>
+        <module>sample3</module>
+        <module>sample4</module>
+        <module>sample5</module>
+        <module>sample6</module>
+        <module>sample7</module>
+        <!--<module>sample8</module>-->
+        <module>sample9</module>
+        <module>sample10</module>
+        <!--<module>sample11</module>-->
+        <module>sample12</module>
+        <module>sample13</module>
+    </modules>
+</project>
