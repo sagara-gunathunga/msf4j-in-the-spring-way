@@ -32,7 +32,7 @@ curl -v -H "Content-Type: application/json" -X POST -d '{"name":"Java","author":
 You should able to see following output. 
 
 ```
-< HTTP/1.1 201 Created
+ HTTP/1.1 201 Created
 ```
 
 Get details of a book by providing the book id. 
@@ -54,7 +54,7 @@ curl -v  -X DELETE  http://localhost:8080/catalog/1
 
 You should able to see following output.
 ``` 
-< HTTP/1.1 202 Accepted
+ HTTP/1.1 202 Accepted
 ``` 
 
 Try to get the details of non-existing book
