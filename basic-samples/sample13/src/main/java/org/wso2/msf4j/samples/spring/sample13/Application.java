@@ -1,4 +1,4 @@
-package org.wso2.msf4j.samples.spring.sample10;
+package org.wso2.msf4j.samples.spring.sample13;
 
 import org.wso2.msf4j.spring.MSF4JSpringApplication;
 

@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.wso2.msf4j</groupId>
             <artifactId>msf4j-spring</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
+            <version>2.0.0</version>
         </dependency>
     </dependencies>
 
@@ -34,6 +34,5 @@
         <module>sample10</module>
         <!--<module>sample11</module>-->
         <module>sample12</module>
-        <module>sample13</module>
     </modules>
 </project>

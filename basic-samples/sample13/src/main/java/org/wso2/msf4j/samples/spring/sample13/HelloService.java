@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.wso2.msf4j.samples.spring.sample4;
+package org.wso2.msf4j.samples.spring.sample13;
 
 import org.springframework.stereotype.Component;
 

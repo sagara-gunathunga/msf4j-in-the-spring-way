@@ -28,7 +28,7 @@
 
     <properties>
         <microservice.mainClass>
-            org.wso2.msf4j.samples.spring.sample2.Application
+            org.wso2.msf4j.samples.spring.sample13.Application
         </microservice.mainClass>
     </properties>
 </project>
