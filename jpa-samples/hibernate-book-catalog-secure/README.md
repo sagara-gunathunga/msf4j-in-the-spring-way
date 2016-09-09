@@ -19,7 +19,8 @@ java -jar target/hibernate-book-catalog-secure-1.0.0.jar
 
 We will use the cURL command line tool for testing. You can use your preferred HTTP or REST client too.
 
-Adding two new book to the catalog 
+
+1.)Adding two new book to the catalog 
 
 ``` 
 curl -v -k -u user:user -H "Content-Type: application/json" -X POST -d '{"name":"Java","author":"SUN"}' https://localhost:8443/catalog
@@ -35,7 +36,7 @@ You should able to see following output.
  HTTP/1.1 201 Created
 ```
 
-Get details of a book by providing the book id. 
+2.) Get details of a book by providing the book id. 
 
 ```
 curl -v -k -X GET -u user:user https://localhost:8443/catalog/1
@@ -46,7 +47,7 @@ You should able to see following output.
 {"id":1,"name":"Java","author":"SUN"}
 ```
 
-Delete a book 
+3.) Delete a book 
 
 ```
 curl -v -k -X DELETE -u user:user https://localhost:8443/catalog/1
@@ -63,7 +64,7 @@ Try to get the details of non-existing book
 curl -v -k -X GET  -u user:user https://localhost:8443/catalog/1
  ```
  
- You should able to see following output.
+ 4.) You should able to see following output.
  
 ```  
  HTTP/1.1 404 Not Found
