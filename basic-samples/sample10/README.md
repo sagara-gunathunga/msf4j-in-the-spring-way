@@ -1,5 +1,29 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to configure MSF4J framework to enable HTTPS transport and disable HTTP transport.
+
+```java
+@Configuration
+public class TransportConfiguration {
+
+    @Bean
+    public HTTPSTransportConfig https() {
+        return new HTTPSTransportConfig().port(7070).keyStore("wso2carbon.jks")
+                .keyStorePass("wso2carbon").certPass("wso2carbon").enabled();
+
+    }
+
+    @Bean
+    public HTTPTransportConfig http() {
+        return new HTTPTransportConfig().enabled(false);
+    }
+
+}
+
+```
+
 ## How to build the sample
 
 From this directory, run
