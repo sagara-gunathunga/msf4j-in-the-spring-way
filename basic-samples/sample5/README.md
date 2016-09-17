@@ -1,5 +1,22 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to add and configure a in-built MSF4J Intercepter using Spring.
+
+```java
+@Configuration
+public class SpringConfiguration {
+
+    @Bean
+    public MetricsInterceptor metricsInterceptor() {
+        MetricsInterceptor metricsInterceptor = new MetricsInterceptor();
+        return metricsInterceptor;
+    }
+
+}
+```
+
 ## How to build the sample
 
 From this directory, run
