@@ -2,7 +2,8 @@
 
 ## About this sample
 
-This is a very basic HelloWorld sample based on MSf4J Spring. This sample demonstrates how to use Spring Java Configuration class to define Spring beans insteat of the  @Component annotation.
+This is a very basic HelloWorld sample based on MSf4J Spring. This sample demonstrates how to use Spring Java
+Configuration class to define Spring beans instead of the  @Component annotation.
 
 ```java
 @Configuration

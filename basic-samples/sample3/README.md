@@ -1,5 +1,17 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstate how to use Spring XML configuration approach to devalop a Spring based MSF4J service.
+
+```java
+@Configuration
+@ImportResource("classpath:application-context.xml")
+public class SpringConfiguration {
+
+}
+```
+
 ## How to build the sample
 
 From this directory, run
