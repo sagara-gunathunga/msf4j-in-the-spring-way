@@ -1,5 +1,42 @@
 # How to build and run the sample
 
+## About this sample
+
+This is a very basic HelloWorld sample based on MSf4J Spring. This sample demonstrates how to use Spring Java Configuration class to define Spring beans insteat of the  @Component annotation.
+
+```java
+@Configuration
+public class SpringConfiguration {
+
+    @Bean
+    public Hello hello() {
+        return new Hello();
+    }
+
+    @Bean
+    public HelloService helloService() {
+        return new HelloService();
+    }
+}
+```
+
+
+```java
+@Path("/hello")
+public class Hello {
+
+    @Autowired
+    private HelloService helloService;
+
+    @GET
+    @Path("/{name}")
+    public String hello(@PathParam("name") String name) {
+        return helloService.hello(name);
+    }
+
+}
+```
+
 ## How to build the sample
 
 From this directory, run
