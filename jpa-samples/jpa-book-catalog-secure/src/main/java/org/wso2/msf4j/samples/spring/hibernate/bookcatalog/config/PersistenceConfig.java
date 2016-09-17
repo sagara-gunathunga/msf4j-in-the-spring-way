@@ -37,25 +37,25 @@ import javax.sql.DataSource;
 public class PersistenceConfig {
 
     @Value("${db.driver}")
-    private String DB_DRIVER;
+    private String dbDriver;
 
     @Value("${db.password}")
-    private String DB_PASSWORD;
+    private String dbPassword;
 
     @Value("${db.url}")
-    private String DB_URL;
+    private String dbUrl;
 
     @Value("${db.username}")
-    private String DB_USERNAME;
+    private String dbUsername;
 
     @Value("${hibernate.show_sql}")
-    private String HIBERNATE_SHOW_SQL;
+    private String hibernateShowSql;
 
     @Value("${hibernate.hbm2ddl.auto}")
-    private String HIBERNATE_HBM2DDL_AUTO;
+    private String hibernateHbm2DdlAuto;
 
     @Value("${packagesToScan}")
-    private String PACKAGES_TO_SCAN;
+    private String packagesToScan;
 
 
     @Bean
@@ -69,12 +69,12 @@ public class PersistenceConfig {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setGenerateDdl(Boolean.TRUE);
-        vendorAdapter.setShowSql(Boolean.valueOf(HIBERNATE_SHOW_SQL));
+        vendorAdapter.setShowSql(Boolean.valueOf(hibernateShowSql));
         factory.setDataSource(dataSource());
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan(PACKAGES_TO_SCAN);
+        factory.setPackagesToScan(packagesToScan);
         Properties jpaProperties = new Properties();
-        jpaProperties.put("hibernate.hbm2ddl.auto", HIBERNATE_HBM2DDL_AUTO);
+        jpaProperties.put("hibernate.hbm2ddl.auto", hibernateHbm2DdlAuto);
         factory.setJpaProperties(jpaProperties);
         factory.afterPropertiesSet();
         factory.setLoadTimeWeaver(new InstrumentationLoadTimeWeaver());
@@ -84,10 +84,10 @@ public class PersistenceConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(DB_DRIVER);
-        dataSource.setUrl(DB_URL);
-        dataSource.setUsername(DB_USERNAME);
-        dataSource.setPassword(DB_PASSWORD);
+        dataSource.setDriverClassName(dbDriver);
+        dataSource.setUrl(dbUrl);
+        dataSource.setUsername(dbUsername);
+        dataSource.setPassword(dbPassword);
         return dataSource;
     }
 }

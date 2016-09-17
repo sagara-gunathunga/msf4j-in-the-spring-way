@@ -28,4 +28,9 @@ public class TransportConfiguration {
     public HTTPTransportConfig http() {
         return new HTTPTransportConfig(6060);
     }
+
+//    @Bean
+//    public HTTPTransportConfig httpInternal() {
+//        return new HTTPTransportConfig(7070);
+//    }
 }

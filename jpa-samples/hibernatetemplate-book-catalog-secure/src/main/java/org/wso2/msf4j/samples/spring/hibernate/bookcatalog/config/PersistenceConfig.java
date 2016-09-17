@@ -36,31 +36,31 @@ import javax.sql.DataSource;
 public class PersistenceConfig {
 
     @Value("${db.driver}")
-    private String DB_DRIVER;
+    private String dbDriver;
 
     @Value("${db.password}")
-    private String DB_PASSWORD;
+    private String dbPassword;
 
     @Value("${db.url}")
-    private String DB_URL;
+    private String dbUrl;
 
     @Value("${db.username}")
-    private String DB_USERNAME;
+    private String dbUsername;
 
     @Value("${hibernate.dialect}")
-    private String HIBERNATE_DIALECT;
+    private String hibernateDialect;
 
     @Value("${hibernate.show_sql}")
-    private String HIBERNATE_SHOW_SQL;
+    private String hibernateShowSql;
 
     @Value("${hibernate.hbm2ddl.auto}")
-    private String HIBERNATE_HBM2DDL_AUTO;
+    private String hibernateHbm2DdlAuto;
 
     @Value("${packagesToScan}")
-    private String PACKAGES_TO_SCAN;
+    private String packagesToScan;
 
     @Value("${hibernate.enable_lazy_load_no_trans:true}")
-    private String HIBERNATE_ENABLE_LAZY_LOAD_NO_TRANS;
+    private String hibernateEnableLazyLoadNoTrans;
 
     @Bean
     @Autowired
@@ -81,27 +81,27 @@ public class PersistenceConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[]{PACKAGES_TO_SCAN});
+        sessionFactory.setPackagesToScan(new String[]{packagesToScan});
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
 
     private Properties hibernateProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", HIBERNATE_DIALECT);
-        properties.put("hibernate.show_sql", HIBERNATE_SHOW_SQL);
-        properties.put("hibernate.hbm2ddl.auto", HIBERNATE_HBM2DDL_AUTO);
-        properties.put("hibernate.enable_lazy_load_no_trans", HIBERNATE_ENABLE_LAZY_LOAD_NO_TRANS);
+        properties.put("hibernate.dialect", hibernateDialect);
+        properties.put("hibernate.show_sql", hibernateShowSql);
+        properties.put("hibernate.hbm2ddl.auto", hibernateHbm2DdlAuto);
+        properties.put("hibernate.enable_lazy_load_no_trans", hibernateEnableLazyLoadNoTrans);
         return properties;
     }
 
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(DB_DRIVER);
-        dataSource.setUrl(DB_URL);
-        dataSource.setUsername(DB_USERNAME);
-        dataSource.setPassword(DB_PASSWORD);
+        dataSource.setDriverClassName(dbDriver);
+        dataSource.setUrl(dbUrl);
+        dataSource.setUsername(dbUsername);
+        dataSource.setPassword(dbPassword);
         return dataSource;
     }
 }
