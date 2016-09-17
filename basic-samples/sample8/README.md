@@ -1,5 +1,20 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to use MSF4J ExceptionMapper concept using MSF4J Spring module.
+
+```java
+@Component
+public class InvalidNameExceptionMapper implements ExceptionMapper<InvalidNameException> {
+    @Override
+    public Response toResponse(InvalidNameException exception) {
+        return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(exception.getMessage()).build();
+    }
+}
+
+```
+
 ## How to build the sample
 
 From this directory, run
