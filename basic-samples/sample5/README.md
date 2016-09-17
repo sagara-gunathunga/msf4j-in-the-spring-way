@@ -2,7 +2,7 @@
 
 ## About this sample
 
-This sample demonstrates how to add and configure a in-built MSF4J Intercepter using Spring.
+This sample demonstrates how to add and configure an in-built MSF4J Interceptor using Spring.
 
 ```java
 @Configuration

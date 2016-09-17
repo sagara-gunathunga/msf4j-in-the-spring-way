@@ -1,5 +1,32 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to develop a custom MSF4J Interceptor and enable it with a service using Spring.
+
+```java
+
+@Component
+public class HeaderLogInterceptor implements Interceptor {
+    @Override
+    public boolean preCall(Request request, Response response, ServiceMethodInfo serviceMethodInfo) throws Exception {
+        Iterator<Map.Entry<String, String>> itr = request.getHeaders().entrySet().iterator();
+        while (itr.hasNext()) {
+            Map.Entry<String, String> entry = itr.next();
+            System.out.println("Header Name: " + entry.getKey() + " value : " + entry.getValue());
+
+        }
+        return true;
+    }
+
+    @Override
+    public void postCall(Request request, int i, ServiceMethodInfo serviceMethodInfo) throws Exception {
+    }
+}
+
+```
+
+
 ## How to build the sample
 
 From this directory, run
