@@ -1,5 +1,32 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to configure MSF4J transport related properties using ListenerConfiguration beans.
+
+```java
+@Configuration
+public class TransportConfig {
+
+    @Bean
+    public ListenerConfiguration http() {
+        ListenerConfiguration listenerConfiguration =
+                new ListenerConfiguration("netty", "0.0.0.0", 7070);
+        listenerConfiguration.setEnableDisruptor(false);
+        listenerConfiguration.setParameters(getDefaultTransportParams());
+        return listenerConfiguration;
+    }
+
+    private List<Parameter> getDefaultTransportParams() {
+        Parameter param1 = new Parameter();
+        param1.setName(Constants.EXECUTOR_WORKER_POOL_SIZE);
+        param1.setValue("1024");
+        return Collections.singletonList(param1);
+    }
+}
+
+```
+
 ## How to build the sample
 
 From this directory, run

@@ -1,5 +1,10 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to inject environment properties into MSF4J runtime.
+
+
 ## How to build the sample
 
 From this directory, run

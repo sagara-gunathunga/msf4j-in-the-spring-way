@@ -2,7 +2,7 @@
 
 ## About this sample
 
-This sample demonstrate how to use Spring XML configuration approach to develop a Spring based MSF4J service.
+This sample demonstrates how to use Spring XML configuration approach to develop a Spring based MSF4J service.
 
 ```java
 @Configuration

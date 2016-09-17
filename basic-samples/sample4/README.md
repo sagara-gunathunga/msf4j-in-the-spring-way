@@ -2,7 +2,7 @@
 
 ## About this sample
 
-This sample demonstrate how to use Spring bean lifecycle annotations such as  @PostConstruct or
+This sample demonstrates how to use Spring bean lifecycle annotations such as  @PostConstruct or
 @PreDestroy with a MSF4J service.
 
 ```java
