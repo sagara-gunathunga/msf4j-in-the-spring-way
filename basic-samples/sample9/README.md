@@ -1,5 +1,23 @@
 # How to build and run the sample
 
+## About this sample
+
+This sample demonstrates how to configure MSF4J transport related properties using Spring Java configuration,
+the service will be run on port 6060 instead of default 8080 port.
+
+```java
+@Configuration
+public class TransportConfiguration {
+
+    @Bean
+    public HTTPTransportConfig http() {
+        return new HTTPTransportConfig(6060);
+    }
+
+}
+
+```
+
 ## How to build the sample
 
 From this directory, run
