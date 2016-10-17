@@ -46,3 +46,9 @@ You should get a response similar to the following:
 ```
 Hello wso2
 ```
+
+## How to use Spring profiles
+
+dev profile - java -Dspring.profiles.active=dev -jar target/sample9-1.0.0.jar
+
+prod profile - java -Dspring.profiles.active=prod -jar target/sample9-1.0.0.jar
