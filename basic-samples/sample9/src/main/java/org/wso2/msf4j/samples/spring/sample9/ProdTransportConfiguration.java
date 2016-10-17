@@ -23,12 +23,12 @@ import org.springframework.context.annotation.Profile;
 import org.wso2.msf4j.spring.transport.HTTPTransportConfig;
 
 @Configuration
-@Profile("dev")
-public class TransportConfiguration {
+@Profile("prod")
+public class ProdTransportConfiguration {
 
     @Bean
     public HTTPTransportConfig http() {
-        return new HTTPTransportConfig(6060);
+        return new HTTPTransportConfig(9090);
     }
 
 }
