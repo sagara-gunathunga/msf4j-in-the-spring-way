@@ -22,6 +22,7 @@ import org.springframework.context.annotation.Configuration;
 import org.wso2.carbon.transport.http.netty.common.Constants;
 import org.wso2.carbon.transport.http.netty.config.ListenerConfiguration;
 import org.wso2.carbon.transport.http.netty.config.Parameter;
+import org.wso2.carbon.transport.http.netty.listener.NettyListener;
 
 import java.util.Collections;
 import java.util.List;
@@ -29,19 +30,20 @@ import java.util.List;
 @Configuration
 public class TransportConfig {
 
-    @Bean
-    public ListenerConfiguration http() {
-        ListenerConfiguration listenerConfiguration =
-                new ListenerConfiguration("netty", "0.0.0.0", 7070);
-        listenerConfiguration.setEnableDisruptor(false);
-        listenerConfiguration.setParameters(getDefaultTransportParams());
-        return listenerConfiguration;
-    }
+//   TODO - Fix this
+//    @Bean
+//    public ListenerConfiguration http() {
+//
+//        ListenerConfiguration listenerConfiguration =
+//                new ListenerConfiguration("netty", "0.0.0.0", 7070);
+//        NettyListener listener = new NettyListener(listenerConfiguration);
+//        return listenerConfiguration;
+//    }
 
-    private List<Parameter> getDefaultTransportParams() {
-        Parameter param1 = new Parameter();
-        param1.setName(Constants.EXECUTOR_WORKER_POOL_SIZE);
-        param1.setValue("1024");
-        return Collections.singletonList(param1);
-    }
+//    private List<Parameter> getDefaultTransportParams() {
+//        Parameter param1 = new Parameter();
+//        param1.setName(Constants.EXECUTOR_WORKER_POOL_SIZE);
+//        param1.setValue("1024");
+//        return Collections.singletonList(param1);
+//    }
 }
